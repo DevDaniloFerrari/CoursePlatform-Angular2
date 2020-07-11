@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { routing, appRoutingProviders } from './app.routing';
 
 import { HeadbarComponent } from './components/shared/headbar/headbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -13,12 +14,10 @@ import { HomePage } from './pages/home-page/home-page';
     HomeComponent,
     CourseDetailsComponent,
     ListCoursesComponent,
-    HomePage
+    HomePage,
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [HomePage]
+  imports: [BrowserModule, routing],
+  providers: [appRoutingProviders],
+  bootstrap: [HomePage],
 })
-export class AppModule { }
+export class AppModule {}
